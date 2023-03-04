@@ -1,3 +1,7 @@
+:root {
+    --mainColor: #10cab7;
+}
+
 *,
 *::before,
 *::after {
@@ -63,6 +67,10 @@ ul {
     cursor: pointer;
 }
 
+.header .logo {
+    width: 3.5rem;
+}
+
 .header .links .icon span {
     background: #333;
     margin-bottom: .5rem;
@@ -95,6 +103,7 @@ ul {
     top: calc(100% + 20px);
     background: #e0e0e0;
     display: none;
+    z-index: 1;
 }
 
 .header .links:hover ul {
@@ -125,4 +134,35 @@ ul {
 
 .header .links ul li:not(:last-child) a {
     border-bottom: 1px solid #ccc;
+}
+
+.landing {
+    background: url('../img/mountain.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+.intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+
+.intro-text h1 {
+    margin: 0;
+    padding: 0;
+    color: var(--mainColor);
+    font-size: 5rem;
+}
+
+.intro-text p {
+    font-size: 1.9rem;
+    line-height: 1.8;
 }
