@@ -441,3 +441,76 @@ ul {
     color: #ddd;
     font-weight: 600;
 }
+
+.contact {
+    padding: var(--sectionPadding) 0;
+}
+
+.contact .container {
+    margin: auto;
+}
+
+.contact .info {
+    text-align: left;
+    padding: 10rem 0;
+}
+
+.contact .info .label {
+    font-size: 4rem;
+    color: var(--mainColor);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.contact .info .link {
+    color: var(--secondColor);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+@media (max-width:767px) {
+    .contact .info {
+        text-align: center;
+    }
+    .contact .info .link,
+    .contact .info .label {
+        font-size: 2rem;
+    }
+    .contact .social {
+        flex-direction: column;
+    }
+    .contact .social .icons {
+        margin-top: 1rem;
+    }
+}
+
+.contact .social {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.contact .social p,
+.contact .social svg {
+    font-size: 2rem;
+}
+
+.contact .social svg {
+    margin-left: 1rem;
+    color: var(--mainColor);
+    cursor: pointer;
+}
+
+.footer {
+    padding: 2rem 0;
+    background: var(--secondColor);
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1.8rem;
+    color: var(--headColor)
+}
+
+.footer p span {
+    color: var(--mainColor)
+}
