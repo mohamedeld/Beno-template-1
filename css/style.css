@@ -1,13 +1,128 @@
 *,
 *::before,
-*::after{
-    margin:0;
-    padding:0;
+*::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 64.5%;
 }
-body{
+
+body {
     font-family: 'Work Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.header {
+    padding: 2rem;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.header .links .icon span {
+    background: #333;
+    margin-bottom: .5rem;
+    height: 2px;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: .3s;
+}
+
+.header .links .icon:hover span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+.header .links ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 20px);
+    background: #e0e0e0;
+    display: none;
+}
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent #e0e0e0 transparent;
+    right: 5px;
+    top: -20px;
+}
+
+.header .links ul li a {
+    display: block;
+    color: #333;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    transition: .3s;
+}
+
+.header .links ul li a:hover {
+    padding-left: 2.5rem;
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ccc;
 }
