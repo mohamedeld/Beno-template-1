@@ -1,5 +1,7 @@
 :root {
     --mainColor: #10cab7;
+    --headColor: #ebeced;
+    --secondColor: #2c4755;
 }
 
 *,
@@ -195,4 +197,106 @@ ul {
     font-size: 1.6rem;
     color: #333;
     line-height: 1.6;
+}
+
+.services .container {
+    margin: auto;
+}
+
+.special-heading {
+    margin: 0;
+    text-align: center;
+    color: var(--headColor);
+    font-size: 10rem;
+    letter-spacing: 3px;
+}
+
+.special-heading+p {
+    text-align: center;
+    margin-top: -40px;
+    font-size: 2rem;
+    color: #797979;
+}
+
+@media (max-width:767px) {
+    .special-heading {
+        font-size: 6rem;
+    }
+    .special-heading+p {
+        font-size: 1.4rem;
+        margin-top: -25px;
+    }
+}
+
+.services {
+    padding: 10rem 0;
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 10rem;
+}
+
+.services .services-content .service {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+@media (max-width:767px) {
+    .services .services-content .service {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .service svg {
+    color: var(--mainColor);
+    flex-basis: 6rem;
+    font-size: 3rem;
+}
+
+.services .service .service-text {
+    flex: 1;
+}
+
+.services .service .service-text h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 20px;
+}
+
+.services .service .service-text p {
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.services .image {
+    position: relative;
+    text-align: center;
+}
+
+.services .image::before {
+    content: "";
+    position: absolute;
+    background-color: var(--secondColor);
+    width: 80px;
+    top: -50px;
+    right: 0;
+    height: calc(100% + 100px);
+    z-index: -1;
+}
+
+.services .image .myimage {
+    width: 260px;
+}
+
+@media(max-width:1199px) {
+    .media-image {
+        display: none;
+    }
 }
